@@ -163,6 +163,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+        Recca0120\LaravelTracy\LaravelTracyServiceProvider::class,
         /*
          * Package Service Providers...
          */
