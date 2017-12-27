@@ -34,5 +34,9 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
-
+    'github' => [
+        'client_id' => 'your github app client_id',
+        'client_secret' => 'your github app client_secret',
+        'redirect' => 'http://laravel.app:8000/auth/github/callback'
+    ],
 ];
