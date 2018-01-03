@@ -20,3 +20,6 @@ Route::get('/tracy',function() {
 });
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('auth/github', 'Auth\AuthController@redirectToProvider');
+Route::get('auth/github/callback', 'Auth\AuthController@handleProviderCallback');
