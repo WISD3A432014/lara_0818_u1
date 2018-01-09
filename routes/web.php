@@ -14,7 +14,7 @@ use App\Http\Middleware\CheckAge;
 
 Route::get('/', function () {
     return view('welcome');
-})->middleware(CheckAge::class);
+})->middleware('first', 'second');;
 Route::get('/tracy',function() {
     throw new \ Exception('Tracy works!');
 });
