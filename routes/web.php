@@ -26,3 +26,8 @@ Route::get('auth/github/callback', 'Auth\AuthController@handleProviderCallback')
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix'=>'login/social'],function(){
+    Route::get('{provider}/redirect', 'Auth\loginController@redirectToProvider')->name('social.redirect');
+    Route::get('{provider}/callback', 'Auth\loginController@handleProviderCallback')->name('social.callback');
+});
