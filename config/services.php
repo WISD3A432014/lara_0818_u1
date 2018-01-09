@@ -35,8 +35,13 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
     'github' => [
-        'client_id' => 'your github app client_id',
-        'client_secret' => 'your github app client_secret',
-        'redirect' => 'http://laravel.app:8000/auth/github/callback'
+                'client_id' => env('GITHUB_CLIENT_ID'),
+                'client_secret' => env('GITHUB_CLIENT_SECRET'),
+                'redirect' => env('GITHUB_REDIRECT'),
+           ],
+    'google' => [
+        'client_id'     => env('GOOGLE_API_ID'),
+        'client_secret' => env('GOOGLE_API_SECRET'),
+        'redirect'      => env('GOOGLE_CALLBACK')
     ],
 ];
